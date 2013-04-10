@@ -62,6 +62,7 @@ ol.timeSheetRow .ui-selected:hover
 	background: -ms-linear-gradient(top,  rgba(224,224,6,1) 0%,rgba(214,197,10,1) 49%,rgba(193,193,3,1) 50%,rgba(191,154,9,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(224,224,6,1) 0%,rgba(214,197,10,1) 49%,rgba(193,193,3,1) 50%,rgba(191,154,9,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e006', endColorstr='#bf9a09',GradientType=0 );
+	border: 1px solid #E0E00E;
 }
 ol.timeSheetRow .ui-selected
 {
@@ -73,7 +74,7 @@ ol.timeSheetRow .ui-selected
 	background: -ms-linear-gradient(top,  rgba(224,224,6,1) 0%,rgba(214,197,10,1) 49%,rgba(193,193,3,1) 50%,rgba(191,154,9,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(224,224,6,1) 0%,rgba(214,197,10,1) 49%,rgba(193,193,3,1) 50%,rgba(191,154,9,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e006', endColorstr='#bf9a09',GradientType=0 ); /* IE6-9 */
-
+	border: 1px solid #E0E00E;
 }
 ol.timeSheetRow .ui-selecting
 {
@@ -86,24 +87,4 @@ ol.timeSheetRow .ui-selecting
 	background: linear-gradient(to bottom,  rgba(224,224,6,1) 0%,rgba(214,197,10,1) 49%,rgba(193,193,3,1) 50%,rgba(191,154,9,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e006', endColorstr='#bf9a09',GradientType=0 ); /* IE6-9 */
 
-}
-.offSettedClass
-{
-	border: 0px none transparent !important;
-	-moz-box-shadow: 0 0px 0px transparent !important;  
-	-webkit-box-shadow: 0 0px 0px transparent !important;  
-	box-shadow: 0 0px 0px transparent !important;
-	background:transparent !important;
-	color:transparent;
-	width: 100px;
-	height: 80px;
-}
-.offSettedClass:hover
-{
-	border: 0px none transparent !important;
-	-moz-box-shadow: 0 0px 0px transparent !important;  
-	-webkit-box-shadow: 0 0px 0px transparent !important;  
-	box-shadow: 0 0px 0px transparent !important;
-	background:transparent !important;
-	color:transparent;
 }
