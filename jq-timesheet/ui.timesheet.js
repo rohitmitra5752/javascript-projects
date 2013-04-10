@@ -2,7 +2,8 @@
 	$.fn.timeSheet = function(options) {
 		var settings = $.extend({
 			'numRows':7,
-			'numCols':5
+			'numCols':5,
+			'labelFunc':function(rowN,colN){ return ""; }
 		},options);
 		return this.each(function() {
 			var $this=$(this);
@@ -15,12 +16,14 @@
 				for(j=1;j<=columns;j++)
 				{
 					column=$("<li></li>");
+					column.html(settings['labelFunc'](i,j));
 					$(row).append(column);
 				}
 				$(array).append(row);
 			}
 			$this.html(array);
 			$(".timeSheetRow").selectable();
+			$(".offSettedClass").removeClass("ui-selectee");
 		});
 	};
 })(jQuery);
