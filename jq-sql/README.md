@@ -1,4 +1,4 @@
-js-sql
+jq-sql
 ======
 
 This project enables users/developers to be able to utilize sql styled queries on JSON objects.
