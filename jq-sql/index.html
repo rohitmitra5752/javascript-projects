@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="jq.sql.js"></script>
+		<script>
+			var data = [
+			{'name':'Mr. Blonde','empid':'1','mailid':'mr.blonde@company.com','age':'Old'},
+			{'name':'Mr. Orange','empid':'2','mailid':'mr.orange@company.com','age':'Young'},
+			{'name':'Mr. Brown','empid':'3','mailid':'mr.brown@company.com','age':'Old'},
+			{'name':'Mr. White','empid':'4','mailid':'mr.white@company.com','age':'Old'},
+			{'name':'Mr. Pink','empid':'5','mailid':'mr.pink@company.com','age':'Young'}
+			];
+			
+			$(function(){
+				var myData = $(data).jSql({'query':'SELECT empid,name,mailid WHERE age=Old'});
+				var tab=$("<table border='1'></table>");
+				var header = $("<tr></tr>");
+				header.append("<th>Emp. ID</th>");
+				header.append("<th>Name</th>");
+				header.append("<th>Mail ID</th>");
+				tab.append(header);
+				myData.each(function(index,element){
+					var row = $("<tr></tr>");
+					row.append("<td>"+element["empid"]+"</td>");
+					row.append("<td>"+element["name"]+"</td>");
+					row.append("<td>"+element["mailid"]+"</td>");
+					tab.append(row);
+				});
+				$("#output").html(tab);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="output">
+		</div>
+	</body>
+</html>
