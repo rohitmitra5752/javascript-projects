@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+		<script src="jq.sse.js"></script>
+		<style>
+			.demoTable
+			{
+				border: 1px solid black;
+				border-collapse:collapse;
+			}
+			.demoTable td, .demoTable th
+			{
+				border: 1px solid black;
+				text-align:center;
+				width:50%;
+			}
+		</style>
+		<script>
+			$(function(){
+				$.sse({
+					url:'sse_server.php',
+					event:function(jsonData){
+						$("#result>tbody").append("<tr><td>" + jsonData.dateVal + "</td><td>" + jsonData.waitTime + "</td></tr>");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Getting server updates</h1>
+		<table id="result" class="demoTable">
+			<thead>
+				<tr>
+					<th>DateTime</td>
+					<th>Wait Value</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</body>
+</html>
