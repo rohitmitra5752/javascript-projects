@@ -34,7 +34,7 @@ function JS2XMLRec(JSObj)
     }
 }
 
-function XML2JS(Xml)
+function XML2JS(xml)
 {
   var modifiedJSObj = XML2JSRec(xml);
   return modifiedJSObj.XMLRoot;
