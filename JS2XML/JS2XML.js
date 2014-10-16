@@ -1,8 +1,7 @@
 function JS2XML(JSObj)
 {
-    modifiedJSObj = {XmlRoot:JSObj};
-    v = JS2XMLRec(modifiedJSObj);
-    return v;
+    var modifiedJSObj = {XmlRoot:JSObj};
+    return JS2XMLRec(modifiedJSObj);
 }
 
 function JS2XMLRec(JSObj)
@@ -33,4 +32,28 @@ function JS2XMLRec(JSObj)
     {
         return JSObj.toString();
     }
+}
+
+function XML2JS(Xml)
+{
+  var modifiedJSObj = XML2JSRec(xml);
+  return modifiedJSObj.XMLRoot;
+}
+
+function XML2JSRec(xml){
+  var hashObj = {};
+  var arrayObj = [];
+  var xml_re = /\<(.[^/^\<]*)\>(.*)\<\/(.*)\>/;
+  var matches = xml.match(xml_re);
+  if(matches===null)
+  {
+    return xml;
+  }
+  if(matches[1] !== matches[3])
+  {
+    console.log("XML tags are not well formed");
+  }
+  var retObj = XML2JSRec(matches[2]);
+  hashObj[matches[1]] = retObj;
+  return hashObj;
 }
