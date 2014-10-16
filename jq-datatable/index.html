@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" href="ui.datatable.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+		<script src="ui.datatable.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#myTable").dataTable({
+					allowSorting: true
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myTable">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email Address</th>
+						<th>Department</th>
+						<th>Role</th>
+						<th>Age</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Mr. A</td>
+						<td>a@company.com</td>
+						<td>Web Frontend</td>
+						<td>Developer</td>
+						<td>35</td>
+					</tr>
+					<tr>
+						<td>Mr. B</td>
+						<td>b@company.com</td>
+						<td>Backend</td>
+						<td>Developer</td>
+						<td>21</td>
+					</tr>
+					<tr>
+						<td>Mr. C</td>
+						<td>c@company.com</td>
+						<td>Web Frontend</td>
+						<td>Tester</td>
+						<td>28</td>
+					</tr>
+					<tr>
+						<td>Mr. D</td>
+						<td>d@company.com</td>
+						<td>Backend</td>
+						<td>Developer</td>
+						<td>31</td>
+					</tr>
+					<tr>
+						<td>Mr. E</td>
+						<td>e@company.com</td>
+						<td>Sales</td>
+						<td>Sales</td>
+						<td>37</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
